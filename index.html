@@ -1,34 +1,392 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
 <title>Prabagaran | Security Manager | Metrod Malaysia</title>
 <meta name="theme-color" content="#6f351b">
+
 <style>
-:root{--copper:#a95528;--copper2:#d48a55;--navy:#0d2137;--ink:#17202c;--soft:#f6f2ee;--line:#e7d6c9}
-*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:#eee;color:var(--ink)}
-.page{max-width:520px;margin:auto;min-height:100vh;background:#fff;box-shadow:0 0 35px #0002;overflow:hidden}
-.hero{position:relative;height:315px;background:url('building.jpg') center/cover no-repeat}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 45%,#091728d9 100%)}
-.brand{position:absolute;z-index:2;top:16px;left:16px;width:170px;border-radius:14px;box-shadow:0 6px 20px #0004}
-.profile{position:relative;z-index:3;margin:-78px 24px 0;text-align:center}.avatar{width:154px;height:154px;border-radius:50%;object-fit:cover;border:5px solid white;box-shadow:0 7px 24px #0004;background:#ddd}
-h1{font-size:30px;margin:12px 0 0;letter-spacing:.4px;color:var(--navy)} .nick{font-size:18px;font-weight:700;color:#6d3219}.role{font-size:21px;font-weight:800;color:var(--copper);margin-top:7px}.dept{font-size:16px;line-height:1.45;color:#445}
-.actions{padding:22px 20px 8px;display:grid;grid-template-columns:1fr 1fr;gap:11px}.btn{display:flex;align-items:center;gap:10px;min-height:65px;border-radius:16px;padding:12px 14px;color:#fff;text-decoration:none;font-weight:800;box-shadow:0 4px 12px #0001}.btn small{display:block;font-size:11px;font-weight:500;opacity:.9;margin-top:2px}.ico{font-size:25px}.wide{grid-column:1/-1;justify-content:center;background:linear-gradient(135deg,#8d431f,#c66b31);font-size:18px}.call{background:#0c5d50}.wa{background:#139b46}.mail{background:#1768b5}.personal{background:#6d39aa}.web{background:#b93325}.map{background:#31546f}
-.card{margin:10px 20px 20px;background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:17px}.card b{color:var(--copper)}.address{line-height:1.5}.foot{background:linear-gradient(135deg,#0c2035,#111);color:#fff;padding:22px 20px 28px;text-align:center;border-top:4px solid var(--copper2)}.foot strong{display:block;font-size:19px}.foot span{font-size:12px;letter-spacing:1.8px;color:#ead7ca}
-.notice{font-size:11px;color:#777;text-align:center;padding:0 24px 18px}
-</style></head>
-<body><main class="page">
-<section class="hero"><img class="brand" src="metrod_brand.jpg" alt="Metrod branding"></section>
-<section class="profile"><img class="avatar" src="profile.jpg" alt="Prabagaran"><h1>PRABAGARAN</h1><div class="nick">(PRABA)</div><div class="role">Security Manager</div><div class="dept">Security Department<br>Metrod Malaysia</div></section>
-<section class="actions">
-<a class="btn wide" href="contact.vcf" download><span class="ico">👤＋</span><span>Save Contact<small>Add to your phone</small></span></a>
-<a class="btn call" href="tel:+60108121217"><span class="ico">☎</span><span>Call<small>+60 10-812 1217</small></span></a>
-<a class="btn wa" href="https://wa.me/60108121217"><span class="ico">◉</span><span>WhatsApp<small>Message me</small></span></a>
-<a class="btn mail" href="mailto:Prabagaran@metrod.com"><span class="ico">✉</span><span>Office Email<small>Prabagaran@metrod.com</small></span></a>
-<a class="btn personal" href="mailto:Prabagaran5595@gmail.com"><span class="ico">✉</span><span>Personal Email<small>Prabagaran5595@gmail.com</small></span></a>
-<a class="btn web" href="https://www.metrod.com/" target="_blank" rel="noopener"><span class="ico">◎</span><span>Company Website<small>www.metrod.com</small></span></a>
-<a class="btn map" href="https://www.google.com/maps/search/?api=1&query=No.+3%2C+Lengkuk+Keluli+2%2C+Bukit+Raja+Prime+Industrial+Park%2C+41720+Klang%2C+Selangor%2C+Malaysia" target="_blank" rel="noopener"><span class="ico">⌖</span><span>View on Map<small>Metrod Malaysia</small></span></a>
+:root{
+  --copper:#a95528;
+  --copper2:#d48a55;
+  --navy:#0d2137;
+  --ink:#17202c;
+  --soft:#f6f2ee;
+  --line:#e7d6c9;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  background:#eee;
+  color:var(--ink);
+}
+
+.page{
+  width:100%;
+  max-width:520px;
+  margin:0 auto;
+  min-height:100vh;
+  background:#fff;
+  box-shadow:0 0 35px #0002;
+  overflow:hidden;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:315px;
+  background:url('building.jpg') center/cover no-repeat;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,#0000 45%,#091728d9 100%);
+}
+
+.brand{
+  position:absolute;
+  z-index:2;
+  top:16px;
+  left:16px;
+  width:170px;
+  max-width:45%;
+  border-radius:14px;
+  box-shadow:0 6px 20px #0004;
+}
+
+/* PROFILE */
+.profile{
+  position:relative;
+  z-index:3;
+  margin:-78px 24px 0;
+  text-align:center;
+}
+
+.avatar{
+  width:154px;
+  height:154px;
+  max-width:45vw;
+  max-height:45vw;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid white;
+  box-shadow:0 7px 24px #0004;
+  background:#ddd;
+}
+
+h1{
+  font-size:30px;
+  margin:12px 0 0;
+  letter-spacing:.4px;
+  color:var(--navy);
+}
+
+.nick{
+  font-size:18px;
+  font-weight:700;
+  color:#6d3219;
+}
+
+.role{
+  font-size:21px;
+  font-weight:800;
+  color:var(--copper);
+  margin-top:7px;
+}
+
+.dept{
+  font-size:16px;
+  line-height:1.45;
+  color:#445;
+}
+
+/* ACTION BUTTONS */
+.actions{
+  width:100%;
+  padding:22px 20px 8px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:11px;
+}
+
+.btn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  width:100%;
+  min-height:65px;
+  border-radius:16px;
+  padding:12px 14px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 4px 12px #0001;
+  overflow:hidden;
+}
+
+.btn > span:not(.ico){
+  min-width:0;
+  overflow:hidden;
+}
+
+.btn small{
+  display:block;
+  min-width:0;
+  font-size:11px;
+  font-weight:500;
+  opacity:.9;
+  margin-top:2px;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+.ico{
+  font-size:25px;
+  flex:0 0 auto;
+}
+
+.wide{
+  grid-column:1/-1;
+  justify-content:center;
+  background:linear-gradient(135deg,#8d431f,#c66b31);
+  font-size:18px;
+}
+
+.call{background:#0c5d50;}
+.wa{background:#139b46;}
+.mail{background:#1768b5;}
+.personal{background:#6d39aa;}
+.web{background:#b93325;}
+.map{background:#31546f;}
+
+/* ADDRESS */
+.card{
+  margin:10px 20px 20px;
+  background:var(--soft);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:17px;
+}
+
+.card b{
+  color:var(--copper);
+}
+
+.address{
+  line-height:1.5;
+}
+
+.notice{
+  font-size:11px;
+  color:#777;
+  text-align:center;
+  padding:0 24px 18px;
+}
+
+/* FOOTER */
+.foot{
+  background:linear-gradient(135deg,#0c2035,#111);
+  color:#fff;
+  padding:22px 20px 28px;
+  text-align:center;
+  border-top:4px solid var(--copper2);
+}
+
+.foot strong{
+  display:block;
+  font-size:19px;
+}
+
+.foot span{
+  font-size:12px;
+  letter-spacing:1.8px;
+  color:#ead7ca;
+}
+
+/* SMALL PHONE OPTIMISATION */
+@media (max-width:420px){
+
+  .actions{
+    padding-left:12px;
+    padding-right:12px;
+    gap:8px;
+  }
+
+  .btn{
+    padding:11px 9px;
+    gap:7px;
+    font-size:15px;
+  }
+
+  .btn small{
+    font-size:10px;
+  }
+
+  .ico{
+    font-size:21px;
+  }
+
+  h1{
+    font-size:27px;
+  }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width:340px){
+
+  .actions{
+    grid-template-columns:1fr;
+  }
+
+  .wide{
+    grid-column:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+<section class="hero">
+  <img class="brand" src="metrod_brand.jpg" alt="Metrod branding">
 </section>
-<section class="card"><b>Company Address</b><div class="address">No. 3, Lengkuk Keluli 2,<br>Bukit Raja Prime Industrial Park,<br>41720 Klang, Selangor Darul Ehsan, Malaysia</div></section>
-<div class="notice">This test profile uses the contact information supplied by Praba and the Metrod images supplied for this NFC-card project.</div>
-<footer class="foot"><strong>METROD MALAYSIA</strong><span>PEOPLE • MATERIALS • A BRIGHTER TOMORROW</span></footer>
-</main></body></html>
+
+<section class="profile">
+
+  <img class="avatar" src="profile.jpg" alt="Prabagaran">
+
+  <h1>PRABAGARAN</h1>
+
+  <div class="nick">(PRABA)</div>
+
+  <div class="role">Security Manager</div>
+
+  <div class="dept">
+    Security Department<br>
+    Metrod Malaysia
+  </div>
+
+</section>
+
+<section class="actions">
+
+<a class="btn wide" href="contact.vcf" download>
+  <span class="ico">👤＋</span>
+  <span>
+    Save Contact
+    <small>Add to your phone</small>
+  </span>
+</a>
+
+<a class="btn call" href="tel:+60108121217">
+  <span class="ico">☎</span>
+  <span>
+    Call
+    <small>+60 10-812 1217</small>
+  </span>
+</a>
+
+<a class="btn wa" href="https://wa.me/60108121217">
+  <span class="ico">◉</span>
+  <span>
+    WhatsApp
+    <small>Message me</small>
+  </span>
+</a>
+
+<a class="btn mail" href="mailto:Prabagaran@metrod.com">
+  <span class="ico">✉</span>
+  <span>
+    Office Email
+    <small>Prabagaran@metrod.com</small>
+  </span>
+</a>
+
+<a class="btn personal" href="mailto:Prabagaran5595@gmail.com">
+  <span class="ico">✉</span>
+  <span>
+    Personal Email
+    <small>Prabagaran5595@gmail.com</small>
+  </span>
+</a>
+
+<a class="btn web"
+   href="https://www.metrod.com/"
+   target="_blank"
+   rel="noopener">
+
+  <span class="ico">◎</span>
+
+  <span>
+    Company Website
+    <small>www.metrod.com</small>
+  </span>
+
+</a>
+
+<a class="btn map"
+   href="https://www.google.com/maps/search/?api=1&query=No.+3%2C+Lengkuk+Keluli+2%2C+Bukit+Raja+Prime+Industrial+Park%2C+41720+Klang%2C+Selangor%2C+Malaysia"
+   target="_blank"
+   rel="noopener">
+
+  <span class="ico">⌖</span>
+
+  <span>
+    View on Map
+    <small>Metrod Malaysia</small>
+  </span>
+
+</a>
+
+</section>
+
+<section class="card">
+
+<b>Company Address</b>
+
+<div class="address">
+No. 3, Lengkuk Keluli 2,<br>
+Bukit Raja Prime Industrial Park,<br>
+41720 Klang, Selangor Darul Ehsan,<br>
+Malaysia
+</div>
+
+</section>
+
+<div class="notice">
+This test profile uses the contact information supplied by Praba and the Metrod images supplied for this NFC-card project.
+</div>
+
+<footer class="foot">
+
+<strong>METROD MALAYSIA</strong>
+
+<span>
+PEOPLE • MATERIALS • A BRIGHTER TOMORROW
+</span>
+
+</footer>
+
+</main>
+
+</body>
+</html>
