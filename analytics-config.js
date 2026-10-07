@@ -1,3 +1,3 @@
-// Analytics is OFF until the owner supplies a real GoatCounter site endpoint.
-// This public endpoint is not a secret. Never put an API key here. See README.md.
-window.PROFILE_ANALYTICS = Object.freeze({ endpoint: "" });
+// Owner-provided GoatCounter endpoint. Set endpoint to "" to disable analytics.
+// Public configuration only: never add API keys or passwords.
+window.PROFILE_ANALYTICS = Object.freeze({ endpoint: "https://praba-nfc-card.goatcounter.com/count" });
